@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { AlertCircle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { LoginCredentials } from "@/types/auth";
+import { API_URL } from "@/services/apiService";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -75,7 +76,7 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/api/users/login", {
+      const response = await fetch(`${API_URL}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

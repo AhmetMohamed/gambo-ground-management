@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { AlertCircle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { SignupData } from "@/types/auth";
+import { API_URL } from "@/services/apiService";
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -115,7 +116,7 @@ const SignupPage = () => {
 
     try {
       // Send the user data to the backend
-      const response = await fetch("http://localhost:8000/api/users/signup", {
+      const response = await fetch(`${API_URL}/users/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
