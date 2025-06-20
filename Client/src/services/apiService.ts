@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// API base URL
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+// API base URL - ensure no trailing slash
+export const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000/api').replace(/\/$/, '');
 
 // Get the JWT token from localStorage
 export const getAuthToken = (): string | null => {
