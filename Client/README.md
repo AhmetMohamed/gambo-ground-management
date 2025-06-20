@@ -1,47 +1,65 @@
-# Welcome to your Lovable project
+# Gambo Ground Management System
 
-**Use your preferred IDE**
+## 📌 Project Overview
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Gambo Ground Management System** is a modern web-based application for managing football ground bookings, premium team academies, and coaching services. The system includes secure authentication, role-based access (user/admin), and a powerful admin dashboard for full control.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🌐 **Live App**: [https://gambo-client.vercel.app/](https://gambo-client.vercel.app/)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+## 🚀 Features
+
+### 👤 User Panel
+
+- Sign up and log in securely
+- Book football grounds
+- Register for premium team academies
+- Access premium services
+
+### 🛠️ Admin Dashboard
+
+- Admin authentication
+- Manage all users
+- View and manage all bookings
+- Full CRUD operations for:
+  - Premium teams
+  - Coaches
+  - Grounds
+- Generate and download reports
+
+---
+
+## 🧰 Tech Stack
+
+- **React** (with TypeScript)
+- **Vite**
+- **Tailwind CSS**
+- **shadcn-ui**
+
+---
+
+## 🖥️ Getting Started
+
+### ✅ Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- npm (Node Package Manager)
+
+### 📦 Installation
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate into the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
