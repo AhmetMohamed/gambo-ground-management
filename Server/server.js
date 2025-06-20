@@ -22,8 +22,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-const MONGODB_URI =
-  "mongodb+srv://gambostadium:gambopass@alldbs.trd2b0u.mongodb.net/gambo";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose
   .connect(MONGODB_URI)
