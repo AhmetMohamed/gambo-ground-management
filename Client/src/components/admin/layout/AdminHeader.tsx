@@ -18,7 +18,7 @@ export function AdminHeader({ currentPage }: AdminHeaderProps) {
           {isMobile && (
             <SidebarTrigger className="md:hidden" />
           )}
-          <h1 className="text-2xl font-bold">{currentPage}</h1>
+          <h1 className="text-2xl font-bold">{currentPage === "Coaches" ? "Coach" : currentPage}</h1>
         </div>
         <div className="flex items-center gap-2">
           <span className="bg-[#098846] text-white px-3 py-1 rounded-full text-sm font-medium">
