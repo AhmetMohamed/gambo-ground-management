@@ -1,5 +1,4 @@
 import {
-  SidebarProvider,
   Sidebar,
   SidebarHeader,
   SidebarContent,
@@ -61,95 +60,93 @@ export function AdminSidebar({ currentPage }: AdminSidebarProps) {
   };
 
   return (
-    <SidebarProvider>
-      <Sidebar className="border-r">
-        <SidebarHeader className="px-6 py-3">
-          <h2 className="text-xl font-bold">Admin Panel</h2>
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Dashboard")}
-                className={currentPage === "Dashboard" ? "bg-gray-200" : ""}
-              >
-                <LayoutDashboard className="mr-2" />
-                <span>Dashboard</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Users")}
-                className={currentPage === "Users" ? "bg-gray-200" : ""}
-              >
-                <Users className="mr-2" />
-                <span>Users</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Booking")}
-                className={currentPage === "Booking" ? "bg-gray-200" : ""}
-              >
-                <Calendar className="mr-2" />
-                <span>Booking</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Premium Teams")}
-                className={currentPage === "Premium Teams" ? "bg-gray-200" : ""}
-              >
-                <Award className="mr-2" />
-                <span>Premium Teams</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Coaches")}
-                className={currentPage === "Coaches" ? "bg-gray-200" : ""}
-              >
-                <UserCog className="mr-2" />
-                <span>Coaches</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Reports")}
-                className={currentPage === "Reports" ? "bg-gray-200" : ""}
-              >
-                <BarChart3 className="mr-2" />
-                <span>Reports</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                onClick={() => handleNavigation("Settings")}
-                className={currentPage === "Settings" ? "bg-gray-200" : ""}
-              >
-                <Settings className="mr-2" />
-                <span>Settings</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarContent>
-        <div className="mt-auto border-t py-3">
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton>
-                <UserCog className="mr-2" />
-                <span>Account</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton onClick={handleLogout}>
-                <LogOut className="mr-2" />
-                <span>Logout</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </div>
-      </Sidebar>
-    </SidebarProvider>
+    <Sidebar className="border-r">
+      <SidebarHeader className="px-6 py-3">
+        <h2 className="text-xl font-bold">Admin Panel</h2>
+      </SidebarHeader>
+      <SidebarContent>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Dashboard")}
+              className={currentPage === "Dashboard" ? "bg-gray-200" : ""}
+            >
+              <LayoutDashboard className="mr-2" />
+              <span>Dashboard</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Users")}
+              className={currentPage === "Users" ? "bg-gray-200" : ""}
+            >
+              <Users className="mr-2" />
+              <span>Users</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Booking")}
+              className={currentPage === "Booking" ? "bg-gray-200" : ""}
+            >
+              <Calendar className="mr-2" />
+              <span>Booking</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Premium Teams")}
+              className={currentPage === "Premium Teams" ? "bg-gray-200" : ""}
+            >
+              <Award className="mr-2" />
+              <span>Premium Teams</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Coaches")}
+              className={currentPage === "Coaches" ? "bg-gray-200" : ""}
+            >
+              <UserCog className="mr-2" />
+              <span>Coaches</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Reports")}
+              className={currentPage === "Reports" ? "bg-gray-200" : ""}
+            >
+              <BarChart3 className="mr-2" />
+              <span>Reports</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => handleNavigation("Settings")}
+              className={currentPage === "Settings" ? "bg-gray-200" : ""}
+            >
+              <Settings className="mr-2" />
+              <span>Settings</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarContent>
+      <div className="mt-auto border-t py-3">
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <UserCog className="mr-2" />
+              <span>Account</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={handleLogout}>
+              <LogOut className="mr-2" />
+              <span>Logout</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </div>
+    </Sidebar>
   );
 }

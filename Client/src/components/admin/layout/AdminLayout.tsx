@@ -2,6 +2,7 @@ import { ReactNode, useEffect } from "react";
 import { AdminSidebar } from "./AdminSidebar";
 import { AdminHeader } from "./AdminHeader";
 import { useLocation } from "react-router-dom";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 interface AdminLayoutProps {
   children: ReactNode;
@@ -30,14 +31,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const currentPage = getPageFromPath();
 
   return (
-    <div className="flex h-screen ">
-      <AdminSidebar currentPage={currentPage} />
-      <div className="flex flex-col flex-1 ">
-        <AdminHeader currentPage={currentPage} />
-        <main className="flex-1 overflow-y-auto p-6 bg-gray-50">
-          {children}
-        </main>
+    <SidebarProvider>
+      <div className="flex h-screen">
+        <AdminSidebar currentPage={currentPage} />
+        <div className="flex flex-col flex-1">
+          <AdminHeader currentPage={currentPage} />
+          <main className="flex-1 overflow-y-auto p-6 bg-gray-50">
+            {children}
+          </main>
+        </div>
       </div>
-    </div>
+    </SidebarProvider>
   );
 }
